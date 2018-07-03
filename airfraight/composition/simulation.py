@@ -4,9 +4,9 @@ import time
 import airfraight.composition.gen_data_fix as fleet_gen_data
 import airfraight.composition.utils as af
 import airfraight.composition.gen_data_fix as gen_data
-import airfraight.loading_system.gen_data_loading_systems as loading_gen_data
-import airfraight.loading_system.gen_data_input as input
-import composition.model_loading_systems as ldm
+import airfraight.composition.loading_system.gen_data_loading_systems as loading_gen_data
+import airfraight.composition.loading_system.gen_data_input as input
+import airfraight.composition.model_loading_systems as ldm
 import airfraight.composition.utils as af
 import numpy as np
 

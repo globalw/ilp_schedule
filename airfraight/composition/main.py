@@ -133,7 +133,7 @@ def run_fleet_loading_schedule_test():
     print(flight_time_matrix)
     print(cost)
 
-    model = af.transpt(L, L_tasks_modified, C, C_fictive, F, T, -1, -1, cost)
+    model = af.transpt(L, L_tasks_modified, C, C_fictive, F, T, -1, -1, num_cities)
     model.optimize()
 
     print("Optimal value:", model.getObjVal())

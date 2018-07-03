@@ -2,9 +2,9 @@ import socket
 import multiprocessing as mp
 import numpy as np
 import airfraight.composition.gen_data_fix as fleet_gen_data
-import airfraight.loading_system.gen_data_loading_systems as loading_gen_data
-import composition.model_loading_systems as ldm
-import airfraight.loading_system.gen_data_input as input
+import airfraight.composition.loading_system.gen_data_loading_systems as loading_gen_data
+import airfraight.composition.loading_system.model_loading_systems as ldm
+import airfraight.composition.loading_system.gen_data_input as input
 import airfraight.composition.simulation as sim
 import airfraight.composition.utils as af
 import ast
@@ -157,6 +157,9 @@ def task_integrate(stringtask, sharedMem):
     for k in updatedTasks:
         layer = 0
         while layer < maxlayer:
+            if (k in L_tasks_copy[layer].keys() and \
+                L_tasks_copy[layer][k] == updatedTasks[k]):
+                return 'task has all ready been included'
             if k not in L_tasks_copy[layer].keys():
                 L_tasks_copy[layer][k] = updatedTasks[k]
                 break
