@@ -305,7 +305,7 @@ def run_airfraight_optimisation_server(host, port):
                                                  loading_C,
                                                  transp_time_ls, LS_start, loading_cost)
         loadingmodel.optimize()
-        if loadingmodel == True:
+        if model.getStatus() == 'optimal':
             # solution was found
             break
 

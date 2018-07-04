@@ -2,3 +2,9 @@
 *.inst
 # ignore result files in the runtime complexity evaluation
 *.dat
+# ignore .idea related stuff
+.idea/
+# cython
+*.pyc
+# chache files
+.cache/

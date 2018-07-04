@@ -27,7 +27,6 @@ def make_fixed_airfraight_inst_by_tasksize(tasksize, num_cities):
 
     L, L_tasks, L_tasks_modified, C, C_task, C_fictive, T, flight_time_matrix, cost = \
         update_airfraight_initial_inst(L_tasks, F, timestep, num_cities)
-
     return L, L_tasks, L_tasks_modified, C, C_task, C_fictive, F, T, flight_time_matrix, cost
 
 def adjust_airfraight_inst_with_loadingtime_offset(L_tasks, F, timestep, num_cities,loadingtimeoffset, flight_time_matrix):
@@ -109,7 +108,7 @@ def construct_airfraight_tasks(tasksize, num_cities):
 
     for (o, d) in it.product(os, ds):
 
-        deadlinetime = np.random.randint(low=10+tasksize, high=tasksize*10, size=1)[0]
+        deadlinetime = np.random.randint(low=10+tasksize, high=tasksize*10+tasksize+1, size=1)[0]
         weight = np.random.randint(low=2, high=200, size=1)[0]
         f_time = np.random.randint(low=1, high=5, size=1)[0]
 

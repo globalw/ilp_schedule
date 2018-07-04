@@ -51,7 +51,7 @@ def solve_optimisation_problem(sharedMem):
     T = sharedMem['timeinterval']
     #optmodel = sharedMem['optmodel']
     ftm = sharedMem['flighttimematrix']
-    num_cities = sharedMem['num_citites']
+    num_cities = sharedMem['num_cities']
     timestep = sharedMem['timestep']
     schedule_x = sharedMem['schedule_x']
     schedule_y = sharedMem['schedule_y']
