@@ -1,0 +1,4 @@
+# ignore user specific instance files
+*.inst
+# ignore result files in the runtime complexity evaluation
+*.dat
