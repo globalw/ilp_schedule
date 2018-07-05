@@ -259,7 +259,7 @@ def run_airfraight_optimisation_server(host, port):
     timestep = 0.0
     loadingsystems, LS_start = read_random_loading_input_instance("data/" + loadingtestcase2)
     orig_flight_time_matrix = flight_time_matrix
-    for loadingtimeoffset in np.arange(0,100,80):
+    for loadingtimeoffset in np.arange(0, 100, 80):
         # here we  adjust the loadingtimeoffset with the tasks. What we need to do
         # is simply to add the loading timeoffset to the flight time... since we
         # agreed on the flightime matrix object. the adjustment should be only
@@ -372,6 +372,8 @@ def run_airfraight_optimisation_server(host, port):
     ##### initialize simulation process ########
     simulationprocess = mp.Process(target=sim.simulation, args=(sharedMem,))
     simulationprocess.start()
+    jobs.append(simulationprocess)
+
     print('simulation started...')
     #jobs.append(simulationprocess)
     ############################################
