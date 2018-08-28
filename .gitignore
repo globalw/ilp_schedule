@@ -8,3 +8,5 @@
 *.pyc
 # chache files
 .cache/
+# workspace file
+.idea/workspace.xml
