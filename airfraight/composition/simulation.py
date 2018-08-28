@@ -206,7 +206,7 @@ def simulation(sharedMemory):
                 solve_optimisation_problem(sharedMemory)
 
             #check if we arrived at the last time
-            if sharedMemory['timeinterval'][-1] == sharedMemory['timestep']:
+            if len(sharedMemory['timeinterval']) and sharedMemory['timeinterval'][-1] == sharedMemory['timestep']:
                 print('simulation |--> +++++ Simulation finished +++++')
                 sharedMemory['simulate'] = False
         else:
