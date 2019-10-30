@@ -99,7 +99,9 @@ When the server is running you enter in another command window
 
    python client.py
    
-When the client connects to the server the computations of the optimizer will be carried out on another thread. Commands you can enter for the client are
+When the client connects to the server the computations of the optimizer will be carried out on another thread. Messages from the client are interpreted in server.py in the function
 ::
 
+   check_for_commands(sharedMem,data)
    
+please put your breakpoints there to interactively understand the formats and commands.
