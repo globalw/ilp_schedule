@@ -86,3 +86,20 @@ To use debug information in PySCIPOpt you need to build it like this:
 
 Be aware that you will need the **debug library** of the SCIP Optimization
 Suite for this to work (``cmake .. -DCMAKE_BUILD_TYPE=Debug``).
+
+Using the Scheduler
+===============================
+The software is build like a server-client application. You start the server in one command window with
+::
+
+   python server.py
+   
+When the server is running you enter in another command window
+::
+
+   python client.py
+   
+When the client connects to the server the computations of the optimizer will be carried out on another thread. Commands you can enter for the client are
+::
+
+   
