@@ -1,6 +1,6 @@
 Introduction
 ============
-ilp_schedule is a python interface with the cutting edge integer linerar programming optimiser
+ilp_schedule is a python interface with the cutting edge integer linerar programming optimizer
 SCIP developed at the `Konrad Zuse Institute Berlin <http://scip.zib.de/>`__. The code is enabling
 developers to build user oriented software to solve large scale scheduling problems.
 
